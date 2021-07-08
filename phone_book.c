@@ -208,7 +208,7 @@ int search (FILE *db_file, char *sterm)	{
 	entry *base = p;
 	while (p!=NULL)	{
 		if (strcmp(sterm,p->name) == 0)	{
-			printf("%-20s : %10s\n", p->name, p->phone);
+			printf("%10s\n", p->phone);
 			ret++;
 		}
 		p=p->next;
