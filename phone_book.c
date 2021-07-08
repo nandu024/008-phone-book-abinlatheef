@@ -106,8 +106,7 @@ void free_entries(entry *p) {
   free(p);
   p = p -> next;
   }
-  /* TBD */
-  //printf("Memory is not being freed. This needs to be fixed!\n");  
+  /* was TBD */
 }
 
 void print_usage(char *message, char *progname) {
@@ -198,7 +197,7 @@ void list(FILE *db_file) {
     count++;
   }
   printf("Total entries :  %d\n", count);
-  /* TBD print total count */
+  /* was TBD print total count */
   free_entries(base);
 }
 
@@ -234,6 +233,7 @@ int delete(FILE *db_file, char *name) {
     }
 	 prev = p;  
     p = p -> next;
+    /* was TBD */
   }
   write_all_entries(base);
   free_entries(base);
