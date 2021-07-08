@@ -228,22 +228,9 @@ int delete(FILE *db_file, char *name) {
       deleted = 1;
       if (p == base)
       	base = p -> next;
-      else {
+      else
       	prev -> next = p -> next;
-			break;
-			}
-      /* Matching node found. Delete it from the linked list.
-         Deletion from a linked list like this
-   
-             p0 -> p1 -> p2
-         
-         means we have to make p0->next point directly to p2. The p1
-         "node" is removed and free'd.
-         
-         If the node to be deleted is p0, it's a special case. 
-      */
-
-      /* TBD */
+		break;
     }
     p = p -> next;
   }
