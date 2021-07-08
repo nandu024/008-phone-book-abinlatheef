@@ -232,6 +232,7 @@ int delete(FILE *db_file, char *name) {
       	prev -> next = p -> next;
 		break;
     }
+	 prev = p;  
     p = p -> next;
   }
   write_all_entries(base);
